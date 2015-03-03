@@ -19,11 +19,10 @@
     <script src="puzzle.js"></script>
     <script>
         window.addEventListener("load", function () {
-            var puzzleElements = document.getElementsByClassName("puzzle"),
-                puzzles = [];
+            var puzzleElements = document.getElementsByClassName("puzzle");
 
             Array.prototype.forEach.call(puzzleElements, function (element, index, array) {
-                puzzles.push(new Puzzle(element));
+                new Puzzle(element);
             }, puzzleElements);
         });
     </script>
