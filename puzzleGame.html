@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Puzzle game</title>
+    <link rel="stylesheet" href="puzzle.css" />
+</head>
+
+<body>
+    <ul class="puzzle">
+        <li class="tile">1</li>
+        <li class="tile">2</li>
+        <li class="tile">3</li>
+        <li class="tile">4</li>
+        <li class="tile">5</li>
+        <li class="tile">6</li>
+        <li class="tile">7</li>
+        <li class="tile">8</li>
+        <li class="tile"> </li>
+    </ul>
+
+    <script src="puzzle.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            var puzzleElements = document.getElementsByClassName("puzzle"),
+                puzzles = [];
+
+            Array.prototype.forEach.call(puzzleElements, function (element, index, array) {
+                puzzles.push(new Puzzle(element));
+            }, puzzleElements);
+        });
+    </script>
+</body>
+
+</html>

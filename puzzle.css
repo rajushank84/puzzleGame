@@ -1,0 +1,39 @@
+.puzzle {
+    position: relative;
+
+    height: 300px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    background: #eee;
+    list-style: none;
+}
+
+.puzzle.won {
+    background: lightgreen;
+}
+
+.puzzle.won li {
+    background: green;
+    cursor: default;
+    color: white;
+}
+
+.tile {
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    cursor: pointer;
+    transition: all .2s ease;
+    background: #ddd;
+    text-align: center;
+    font-size: 72px;
+}
