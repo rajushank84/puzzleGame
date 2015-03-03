@@ -24,7 +24,7 @@ Tile.prototype = {
     bindEvents: function () {
         var that = this;
 
-        this.el.addEventListener("click", function (event) {
+        this.el.addEventListener("click", function () {
             that.puzzle.swapTile(that);
         });
     },
@@ -48,7 +48,7 @@ Puzzle.prototype = {
             positions = this.getPositions(),
             counter = 0;
 
-        Array.prototype.forEach.call(tileElements, function (element, index, array) {
+        Array.prototype.forEach.call(tileElements, function (element) {
             var tile = new Tile(element, positions[counter], that);
 
             that.tiles.push(tile);
@@ -81,9 +81,9 @@ Puzzle.prototype = {
     },
 
     position: function () {
-        this.tiles.forEach(function (tile, index, array) {
+        this.tiles.forEach(function (tile) {
             tile.position();
-        })
+        });
     },
 
     swapTile: function (tile) {
@@ -95,8 +95,8 @@ Puzzle.prototype = {
             return;
         }
 
-        blankX = this.blankTile.x;
-        blankY = this.blankTile.y;
+        var blankX = this.blankTile.x;
+        var blankY = this.blankTile.y;
 
         this.blankTile.x = tile.x;
         this.blankTile.y = tile.y;

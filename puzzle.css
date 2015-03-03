@@ -16,7 +16,7 @@
     background: lightgreen;
 }
 
-.puzzle.won li {
+.puzzle.won .tile {
     background: green;
     cursor: default;
     color: white;
